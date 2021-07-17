@@ -1,0 +1,14 @@
+body {
+	font-family: 'Yusei Magic', 'sans-serif';
+}
+
+.nav-bar {
+	text-decoration: none;
+	padding: 30px;
+}
+
+.nav-bar-ul {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+}

@@ -9,6 +9,7 @@ body {
 
 .nav-bar-ul {
 	display: flex;
-	justify-content: center;
+	flex-direction: row-reverse;
+	justify-content: right;
 	list-style-type: none;
 }

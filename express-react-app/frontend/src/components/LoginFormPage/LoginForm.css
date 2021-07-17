@@ -1,0 +1,46 @@
+body {
+	font-family: 'Yusei Magic', 'sans-serif';
+}
+
+.form-input {
+    margin-left: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.form-label{
+    display: flex;
+    justify-content: left;
+    margin: 25px;
+}
+
+.initial-form {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    border: 1px solid black;
+    height: 180px;
+    width: 400px;
+    margin-top: 80px;
+    margin-left: 400px;
+    margin: 0, auto;
+    border-radius: 20px;
+}
+
+.login-form {
+    height: 230px;
+}
+
+.form-btn {
+    display: flex;
+    margin-left: 70px;
+    font-family: 'Yousie';
+    width: 80px;
+    border-radius: 15px;
+    margin-top: 5px;
+
+}
+
+.form-btn__container {
+    display: -webkit-inline-box;
+}

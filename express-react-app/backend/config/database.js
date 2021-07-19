@@ -8,8 +8,6 @@ const host = db.host;
 
 module.exports = {
 	development: {
-		firstName,
-		lastName,
 		username,
 		password,
 		database,

@@ -29,7 +29,10 @@ function Navigation({ isLoaded }) {
 		<>
 			<div className='nav-bar__container'>
 				<div className='nav-bar-logo__container'>
-					<img className='nav-bar__logotxt' src={logotxt}></img>
+					<img
+						alt='navbar-logotxt'
+						className='nav-bar__logotxt'
+						src={logotxt}></img>
 				</div>
 				<ul className='nav-bar-ul'>
 					{isLoaded && sessionLinks}
@@ -44,9 +47,13 @@ function Navigation({ isLoaded }) {
 			<div className='home-logo__container'>
 				<div className='title-logo__container'>
 					<img
+						alt='title-logo'
 						className='title-logo'
 						src='https://scontent-den4-1.xx.fbcdn.net/v/t31.18172-8/195136_1684899921290_3431314_o.jpg?_nc_cat=105&ccb=1-3&_nc_sid=de6eea&_nc_ohc=EkeuXqOksMIAX_TnxCv&_nc_oc=AQntQ8RpUXzolwlVMaLiIZ-aVQb6h-_AlkbZRF4kUx49MhE5ROrbNuabxj3qRI1N7Mk&_nc_ht=scontent-den4-1.xx&oh=f5a95df237ac5829d425cc379303b82e&oe=60F92415'></img>
-					<img className='title-logotxt' src={logotxt}></img>
+					<img
+						alt='title-logo-txt'
+						className='title-logotxt'
+						src={logotxt}></img>
 				</div>
 				<div className='title'></div>
 				<div className='title-container'>

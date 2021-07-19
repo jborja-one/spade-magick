@@ -9,6 +9,8 @@ import Navigation from '../Navigation';
 function SignupFormPage() {
 	const dispatch = useDispatch();
 	const sessionUser = useSelector((state) => state.session.user);
+	const [firstName, setFirstName] = useState('');
+	const [lastName, setLasttName] = useState('');
 	const [email, setEmail] = useState('');
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
@@ -47,6 +49,28 @@ function SignupFormPage() {
 				))}
 			</ul>
 			<label className='form-label'>
+				First Name
+				<input
+					className='form-input'
+					type='text'
+					value={firstName}
+					onChange={(e) => setFirstName(e.target.value)}
+					required
+					placeholder='Ex. Chris'
+				/>
+			</label>
+			<label className='form-label'>
+				Last Name
+				<input
+					className='form-input'
+					type='text'
+					value={lastName}
+					onChange={(e) => setLasttName(e.target.value)}
+					required
+					placeholder='Ex. Angel'
+				/>
+			</label>
+			<label className='form-label'>
 				Email
 				<input
 					className='form-input'
@@ -65,7 +89,7 @@ function SignupFormPage() {
 					value={username}
 					onChange={(e) => setUsername(e.target.value)}
 					required
-					placeholder='Ex. Chris Angel'
+					placeholder='Ex. Mr. Spade Magick'
 				/>
 			</label>
 			<label className='form-label'>

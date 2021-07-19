@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
 
 function ProfileButton({ user }) {
@@ -25,13 +26,14 @@ function ProfileButton({ user }) {
 
 	const logout = (e) => {
 		e.preventDefault();
+		Redirect('/login'); //todo once logged out, should rederice to "/login" not working!!!
 		dispatch(sessionActions.logout());
 	};
 
 	return (
 		<>
 			<button onClick={openMenu}>
-				<i className='far fa-user' />
+				<i class='fas fa-hat-wizard'></i>
 			</button>
 			{showMenu && (
 				<ul className='profile-dropdown'>

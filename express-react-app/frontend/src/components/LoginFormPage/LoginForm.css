@@ -18,11 +18,14 @@ body {
 	width: 50%;
 	border-radius: 10px;
 	font-weight: bolder;
+	transition-property: margin;
+	transition-delay: 0s;
 }
 
 .form-input:focus {
-	background-color: #be1722;
-	color: white;
+	margin: 10px;
+	width: 270px;
+	height: 20px;
 }
 
 .form-label {

@@ -23,6 +23,8 @@ body {
 	padding: 15px;
 }
 
-/* .profile-dropdown__li {
-	margin: 0 auto;
-} */
+.fa-hat-wizard {
+	width: 20px;
+	height: 20px;
+	align-content: center;
+}

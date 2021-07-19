@@ -1,46 +1,115 @@
 body {
 	font-family: 'Yusei Magic', 'sans-serif';
+	background: url(https://cdn4.vectorstock.com/i/1000x1000/07/58/magician-and-magic-theme-set-icons-seamless-vector-11710758.jpg)
+		no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#root {
+	width: 100%;
+	height: 100%;
 }
 
 .form-input {
-    margin-left: 10px;
-    width: 50%;
-    border-radius: 10px;
+	margin-left: 10px;
+	width: 50%;
+	border-radius: 10px;
+	font-weight: bolder;
 }
 
-.form-label{
-    display: flex;
-    justify-content: left;
-    margin: 25px;
+.form-input:focus {
+	background-color: #be1722;
+	color: white;
+}
+
+.form-label {
+	display: flex;
+	justify-content: left;
+	margin: 25px;
+	justify-content: space-between;
+	font-weight: bolder;
 }
 
 .initial-form {
-    display: flex;
-    /* align-items: center; */
-    flex-direction: column;
-    border: 1px solid black;
-    height: 180px;
-    width: 400px;
-    margin-top: 80px;
-    margin-left: 400px;
-    margin: 0, auto;
-    border-radius: 20px;
-}
-
-.login-form {
-    height: 230px;
+	display: flex;
+	/* align-items: center; */
+	flex-direction: column;
+	border: 1px solid black;
+	height: auto;
+	width: 500px;
+	margin-top: 80px;
+	margin-left: 400px;
+	margin: 0, auto;
+	border-radius: 20px;
+	background-color: white;
+	opacity: 0.8;
 }
 
 .form-btn {
-    display: flex;
-    margin-left: 70px;
-    font-family: 'Yousie';
-    width: 80px;
-    border-radius: 15px;
-    margin-top: 5px;
+	font-family: 'Yusei Magic';
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	margin: 15px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	transition-property: opacity;
+	transition-duration: 1s;
+}
 
+.form-btn:hover {
+	opacity: 1;
+	box-shadow: 0px 0px 10px 10px red;
 }
 
 .form-btn__container {
-    display: -webkit-inline-box;
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.label-img {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	border-radius: 100px;
+	margin-top: 25px;
+	margin-left: 40px;
+	margin-bottom: 0px;
+	opacity: 0.4;
+	transition-property: opacity;
+	transition-duration: 1s;
+	/* transition-delay: 1s; */
+}
+
+.label-img:hover {
+	opacity: 1;
+	box-shadow: 0px 0px 10px 10px red;
+}
+
+.logotxt {
+	width: 250px;
+	height: 250px;
+	margin-bottom: -190px;
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: 1s;
+}
+
+.logotxt:hover {
+	opacity: 0.4;
+}
+
+.logo-container {
+	display: flex;
+}
+
+.log-from__footer-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
 }

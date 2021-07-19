@@ -1,3 +1,3 @@
 import { useState } from 'react';
 
-export function homeTitle() {}
+export function category() {}

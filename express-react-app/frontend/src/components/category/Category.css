@@ -1,0 +1,47 @@
+.component-container {
+}
+
+.category-component {
+	display: inline-block;
+	box-sizing: border-box;
+	background-color: white;
+	opacity: 0.8;
+	border: 1px solid black;
+	border-radius: 15px;
+	margin: 20px;
+	height: auto;
+	width: 373px;
+	height: 500px;
+	padding: 25px;
+	opacity: 0.8;
+	transition-property: opacity;
+	transition-delay: 0s;
+}
+
+.category-component:hover {
+	opacity: 1;
+	background-color: red;
+}
+
+.component-title {
+	display: flex;
+	flex-direction: column;
+	-ms-flex-align: end;
+	background-color: white;
+	color: red;
+	border: 1px solid black;
+	border-radius: 15px;
+	/* padding-left: 40%; */
+	text-align: center;
+}
+
+img {
+	width: 320px;
+	height: 400px;
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+	color: red;
+}

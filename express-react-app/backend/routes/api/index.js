@@ -1,15 +1,15 @@
 const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
+const homeCategory = require('./home-categories');
 
 router.use('/session', sessionRouter);
-
+router.use('/home', homeCategory);
 router.use('/users', usersRouter);
 
-
-router.post('/test', function(req, res){
-    res.json({requestBody: req.body})
-})
+router.post('/test', function (req, res) {
+	res.json({ requestBody: req.body });
+});
 
 //! Test route for setTokenCookie
 // const asyncHandler = require('express-async-handler');

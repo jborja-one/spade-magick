@@ -5,10 +5,11 @@ import './Category.css';
 
 function Category() {
 	const dispatch = useDispatch();
-	const category = useSelector((state) =>
-		state.homeCategory.map((item) => item['title'])
-	);
-	console.log(category);
+	const category = useSelector((state) => {
+		return state.homeCategory.map((item) => item['image']);
+		// console.log();
+	});
+
 	useEffect(() => {
 		dispatch(homeCategory());
 	}, [dispatch]);
@@ -18,10 +19,10 @@ function Category() {
 				return (
 					<div className='category-component'>
 						<div className='category-img'>
-							<img src='https://christopherhowell.net/images/Sleight-of-Hand-Magician-Dai-Vernon-2.jpg'></img>
+							<img src={item}></img>
 						</div>
 						<div className='component-title'>
-							{item}
+							{item[0]}
 							<a href=''>Discover More</a>
 						</div>
 					</div>

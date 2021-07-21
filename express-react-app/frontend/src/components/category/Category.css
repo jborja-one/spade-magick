@@ -20,7 +20,7 @@
 
 .category-component:hover {
 	opacity: 1;
-	background-color: red;
+	background-color: rgba(190, 23, 34, 0.7);
 }
 
 .component-title {

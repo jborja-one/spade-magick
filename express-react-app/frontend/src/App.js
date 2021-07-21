@@ -6,6 +6,7 @@ import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation';
 import Category from './components/Category';
+import Illusions from './components/Illusion';
 
 function App() {
 	const dispatch = useDispatch();
@@ -26,6 +27,9 @@ function App() {
 				</Route>
 				<Route path='/signup'>
 					<SignupFormPage />
+				</Route>
+				<Route path='/illusions'>
+					<Illusions />
 				</Route>
 			</Switch>
 		</>

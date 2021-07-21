@@ -2,8 +2,10 @@ const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const homeCategory = require('./home-categories');
+const illusion = require('./illusion');
 
 router.use('/session', sessionRouter);
+router.use('/illusion', illusion);
 router.use('/home', homeCategory);
 router.use('/users', usersRouter);
 

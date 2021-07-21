@@ -2,11 +2,13 @@ import thunk from 'redux-thunk';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import sessionReducer from './session';
 import homeCategoryReducer from './home-category';
+import illusionReducer from './illusion';
 
 const rootReducer = combineReducers({
 	// add reducer functions here
 	session: sessionReducer,
 	homeCategory: homeCategoryReducer,
+	illusions: illusionReducer,
 });
 
 let enhancer;

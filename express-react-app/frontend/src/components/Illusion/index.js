@@ -7,6 +7,10 @@ function Illusion() {
 	const dispatch = useDispatch();
 	const illusion = useSelector((state) => state.illusions);
 
+	useEffect(() => {
+		dispatch(illusions());
+	}, [dispatch]);
+
 	return <h1>Illusions Page</h1>;
 }
 

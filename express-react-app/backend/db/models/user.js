@@ -72,6 +72,7 @@ module.exports = (sequelize, DataTypes) => {
 
 	User.associate = function (models) {
 		// associations can be defined here
+		User.hasMany(models.Illusion, { foreignKey: 'userId' });
 	};
 
 	User.prototype.toSafeObject = function () {

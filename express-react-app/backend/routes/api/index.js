@@ -3,11 +3,13 @@ const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const homeCategory = require('./home-categories');
 const illusion = require('./illusion');
+const category = require('./category');
 
 router.use('/session', sessionRouter);
 router.use('/illusion', illusion);
 router.use('/home', homeCategory);
 router.use('/users', usersRouter);
+router.use('/category', category);
 
 router.post('/test', function (req, res) {
 	res.json({ requestBody: req.body });

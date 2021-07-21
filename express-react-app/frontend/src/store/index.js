@@ -3,12 +3,14 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import sessionReducer from './session';
 import homeCategoryReducer from './home-category';
 import illusionReducer from './illusion';
+import categoriesReducer from './categories';
 
 const rootReducer = combineReducers({
 	// add reducer functions here
 	session: sessionReducer,
 	homeCategory: homeCategoryReducer,
 	illusions: illusionReducer,
+	categories: categoriesReducer,
 });
 
 let enhancer;

@@ -15,7 +15,7 @@ body {
 	display: flex;
 	margin-left: 20px;
 	align-items: center;
-	/* justify-content: flex-start; */
+	justify-content: center;
 }
 
 .nav-bar {
@@ -27,7 +27,7 @@ body {
 	display: flex;
 	flex-direction: row-reverse;
 	list-style-type: none;
-	margin-left: 65%;
+	margin-left: 60%;
 }
 
 .profile-dropdown {

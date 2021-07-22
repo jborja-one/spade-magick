@@ -8,6 +8,7 @@ import Navigation from './components/Navigation';
 import Category from './components/Category';
 import Illusion from './components/Illusion';
 import EachCategory from './components/EachCategory';
+import CreateIllusionForm from './components/CreateIllusionForm';
 
 function App() {
 	const dispatch = useDispatch();
@@ -28,6 +29,9 @@ function App() {
 				</Route>
 				<Route path='/signup'>
 					<SignupFormPage />
+				</Route>
+				<Route path='/illusions/create'>
+					<CreateIllusionForm isLoaded={isLoaded} />
 				</Route>
 				<Route path='/illusions/:illusionId'>
 					<Illusion isLoaded={isLoaded} />

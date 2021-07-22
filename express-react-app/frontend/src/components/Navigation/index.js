@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import logotxt from './images/logo-txt.png';
+import logo from './images/logo.jpeg';
 
 function Navigation({ isLoaded }) {
 	const sessionUser = useSelector((state) => state.session.user);
@@ -36,9 +37,16 @@ function Navigation({ isLoaded }) {
 				</div>
 				<ul className='nav-bar-ul'>
 					{isLoaded && sessionLinks}
-					<li className='nav-bar__link'>Discover</li>
 					<li className='nav-bar__link'>
 						<NavLink exact to='/' className='nav-bar'>
+							Discover
+						</NavLink>
+					</li>
+					<li className='nav-bar__link'>
+						<NavLink
+							exact
+							to='/illusions/create'
+							className='nav-bar'>
 							Create
 						</NavLink>
 					</li>
@@ -49,7 +57,7 @@ function Navigation({ isLoaded }) {
 					<img
 						alt='title-logo'
 						className='title-logo'
-						src='https://scontent-den4-1.xx.fbcdn.net/v/t31.18172-8/195136_1684899921290_3431314_o.jpg?_nc_cat=105&ccb=1-3&_nc_sid=de6eea&_nc_ohc=EkeuXqOksMIAX_TnxCv&_nc_oc=AQntQ8RpUXzolwlVMaLiIZ-aVQb6h-_AlkbZRF4kUx49MhE5ROrbNuabxj3qRI1N7Mk&_nc_ht=scontent-den4-1.xx&oh=f5a95df237ac5829d425cc379303b82e&oe=60F92415'></img>
+						src={logo}></img>
 					<img
 						alt='title-logo-txt'
 						className='title-logotxt'

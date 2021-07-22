@@ -16,7 +16,6 @@ export const homeCategory = () => async (dispatch) => {
 };
 
 const homeCategoryReducer = (state = [], action) => {
-	console.log(action);
 	let newState;
 	switch (action.type) {
 		case SET_CATEGORY:

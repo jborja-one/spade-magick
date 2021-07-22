@@ -29,11 +29,11 @@ function App() {
 				<Route path='/signup'>
 					<SignupFormPage />
 				</Route>
-				<Route path='/category/illusions'>
+				<Route path='/illusion'>
 					<Illusions />
 				</Route>
-				<Route path='/category'>
-					<EachCategory />
+				<Route path='/categories/:categoryId'>
+					<EachCategory isLoaded={isLoaded} />
 				</Route>
 			</Switch>
 		</>

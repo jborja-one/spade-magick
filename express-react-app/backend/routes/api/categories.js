@@ -1,13 +1,14 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
-const { Category } = require('../../db/models');
+const { Illusion } = require('../../db/models');
 const router = express.Router();
 
 router.get(
-	'/',
-	asyncHandler(async (_req, res) => {
-		const categories = await Category.findAll({ where: categoryId });
-		res.json(categories);
+	'/:categoryId',
+	asyncHandler(async (req, res) => {
+		const { categoryId } = req.params;
+		const illusions = await Illusion.findAll({ where: { categoryId } });
+		res.json(illusions);
 	})
 );
 

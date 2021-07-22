@@ -8,7 +8,7 @@ module.exports = {
 		 * Example:
 		 */
 		await queryInterface.bulkInsert(
-			'Illusion',
+			'Illusions',
 			[
 				{
 					id: 1,
@@ -45,6 +45,6 @@ module.exports = {
 		 *
 		 * Example:
 		 */
-		await queryInterface.bulkDelete('Illusion', null, {});
+		await queryInterface.bulkDelete('Illusions', null, {});
 	},
 };

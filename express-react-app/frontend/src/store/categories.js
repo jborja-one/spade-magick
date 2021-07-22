@@ -1,26 +1,25 @@
 import { csrfFetch } from './csrf';
 
-const SET_CATEGORIES = 'categories/setCategories';
+const SET_CATEGORY_ILLUSIONS = 'categories/setCategoryIllusions';
 
-const setCategories = (eachCategory) => {
+const setCategories = (categoryIllusions) => {
 	return {
-		type: SET_CATEGORIES,
-		payload: eachCategory,
+		type: SET_CATEGORY_ILLUSIONS,
+		payload: categoryIllusions,
 	};
 };
 
-export const categories = () => async (dispatch) => {
-	const response = await csrfFetch('/api/category');
-	const eachCategory = await response.json;
-	dispatch(setCategories(eachCategory));
+export const loadCategory = (categoryId) => async (dispatch) => {
+	const response = await fetch(`/api/category/${categoryId}`);
+	const categoryIllusions = await response.json();
+	dispatch(setCategories(categoryIllusions));
 };
 
 const categoriesReducer = (state = [], action) => {
 	console.log(action);
 	let newState;
 	switch (action.type) {
-		case SET_CATEGORIES:
-			newState = Object.assign({}, state);
+		case SET_CATEGORY_ILLUSIONS:
 			newState = action.payload;
 			return newState;
 		default:

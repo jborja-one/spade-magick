@@ -35,10 +35,12 @@
 	text-align: center;
 }
 
-img {
+.categoryImg {
 	width: 320px;
 	height: 400px;
 	object-fit: cover;
+	border: 1px solid black;
+	border-radius: 15px;
 }
 
 a {

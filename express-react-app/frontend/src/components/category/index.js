@@ -25,6 +25,7 @@ function Category() {
 						<div className='category-component'>
 							<div className='category-img'>
 								<img
+									alt='category-image'
 									className='categoryImg'
 									src={item.image}></img>
 							</div>

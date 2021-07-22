@@ -24,7 +24,7 @@ function Navigation({ isLoaded }) {
 	// 		</>
 	// 	);
 	// }
-	//todo create NavLink for path
+
 	return (
 		<>
 			<div className='nav-bar__container'>

@@ -4,12 +4,10 @@ const { Illusion } = require('../../db/models');
 const router = express.Router();
 
 router.get(
-	'/:id(\\d+)',
+	'/:illusionId',
 	asyncHandler(async (req, res) => {
-		const IllusionId = parseInt(req.params.id, 10);
+		const { IllusionId } = req.params;
 		const illusion = await Illusion.findAll({ where: { IllusionId } });
-
-		const build = Illusion.build();
 		res.json(illusion);
 	})
 );

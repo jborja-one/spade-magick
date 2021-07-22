@@ -1,4 +1,4 @@
-import { csrfFetch } from './csrf';
+// import { csrfFetch } from './csrf';
 
 const SET_CATEGORY_ILLUSIONS = 'categories/setCategoryIllusions';
 
@@ -16,7 +16,6 @@ export const loadCategory = (categoryId) => async (dispatch) => {
 };
 
 const categoriesReducer = (state = [], action) => {
-	console.log(action);
 	let newState;
 	switch (action.type) {
 		case SET_CATEGORY_ILLUSIONS:

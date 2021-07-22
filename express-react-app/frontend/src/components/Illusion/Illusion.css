@@ -1,0 +1,71 @@
+.illusion-container {
+	display: inline-block;
+	box-sizing: border-box;
+	background-color: white;
+	opacity: 0.8;
+	border: 1px solid black;
+	border-radius: 15px;
+	margin: 20px;
+	height: auto;
+	width: 1200;
+	height: auto;
+	padding: 25px;
+	opacity: 0.8;
+	transition-property: opacity;
+	transition-delay: 0s;
+	align-content: center;
+	transition-property: opacity;
+	transition-delay: 0s;
+}
+
+/* .illusion-container:hover {
+	opacity: 1;
+} */
+
+.illusion-title {
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+	text-decoration: underline;
+	font-weight: bolder;
+}
+
+.illusion-img {
+	display: flex;
+	justify-content: center;
+	opacity: 1;
+	margin: 20px;
+}
+
+img {
+	border: 1px solid white;
+	border-radius: 15px;
+}
+
+.description-title {
+	display: flex;
+	justify-content: left;
+	font-size: 40px;
+	text-decoration: underline;
+	font-weight: bolder;
+}
+
+.steps-title {
+	display: flex;
+	justify-content: left;
+	font-size: 40px;
+	text-decoration: underline;
+	font-weight: bolder;
+}
+
+.btn-container {
+	display: flex;
+	justify-content: center;
+	justify-content: space-evenly;
+}
+
+.illusion-btn {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}

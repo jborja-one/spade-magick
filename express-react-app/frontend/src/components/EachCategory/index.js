@@ -70,7 +70,7 @@ function EachCategory({ isLoaded }) {
 			<div className='component-container'>
 				{category.map((item) => {
 					return (
-						<Link to={`/categories/${item.id}`}>
+						<Link to={`/illusions/${item.id}`}>
 							<div className='category-component'>
 								<div className='category-img'>
 									<img

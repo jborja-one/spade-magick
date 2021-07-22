@@ -6,7 +6,7 @@ import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation';
 import Category from './components/Category';
-import Illusions from './components/Illusion';
+import Illusion from './components/Illusion';
 import EachCategory from './components/EachCategory';
 
 function App() {
@@ -29,8 +29,8 @@ function App() {
 				<Route path='/signup'>
 					<SignupFormPage />
 				</Route>
-				<Route path='/illusion'>
-					<Illusions />
+				<Route path='/illusions/:illusionId'>
+					<Illusion isLoaded={isLoaded} />
 				</Route>
 				<Route path='/categories/:categoryId'>
 					<EachCategory isLoaded={isLoaded} />

@@ -47,7 +47,6 @@ export const illusionCreate = (payload) => async (dispatch) => {
 };
 
 export const illusionEdit = (payload) => async (dispatch) => {
-	console.log(payload, 'from thunk');
 	const response = await csrfFetch(
 		`/api/illusion/edit/${payload.illusionId}`,
 		{
@@ -55,7 +54,7 @@ export const illusionEdit = (payload) => async (dispatch) => {
 			body: JSON.stringify(payload),
 		}
 	);
-	console.log(response.ok === true);
+
 	if (response.ok) {
 		const illusion = await response.json();
 		dispatch(editIllusion(illusion));

@@ -19,7 +19,11 @@ function Category() {
 	}, [dispatch]);
 	return (
 		<div className='component-container'>
-			{/* <h1 className='form-input'>Top Categories...Enjoy our Art</h1> */}
+			<div className='category-header__container'>
+				<h1 className='category-page__header form-input'>
+					Top Categories ... Enjoy our Art
+				</h1>
+			</div>
 			{category.map((item) => {
 				return (
 					<Link to={`/categories/${item.id}`}>

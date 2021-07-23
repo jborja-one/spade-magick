@@ -31,7 +31,6 @@ function EditIllusionForm({ isLoaded }) {
 		e.preventDefault();
 
 		const payload = {
-			// ...editIllusion,
 			title,
 			image,
 			description,

@@ -13,18 +13,6 @@ function Navigation({ isLoaded }) {
 	if (sessionUser) {
 		sessionLinks = <ProfileButton user={sessionUser} />;
 	}
-	// else {
-	// 	sessionLinks = (
-	// 		<>
-	// 			<NavLink to='/login' className='nav-bar'>
-	// 				Log In
-	// 			</NavLink>
-	// 			<NavLink to='/signup' className='nav-bar'>
-	// 				Sign Up
-	// 			</NavLink>
-	// 		</>
-	// 	);
-	// }
 
 	return (
 		<>

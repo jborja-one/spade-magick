@@ -11,9 +11,7 @@ import logo from './images/logo.jpeg';
 function EachCategory({ isLoaded }) {
 	const dispatch = useDispatch();
 	const { categoryId } = useParams();
-	console.log(categoryId);
 	const category = useSelector((state) => {
-		console.log(state);
 		return state.categories.filter((item) => {
 			const image = item['image'];
 			const title = item['title'];

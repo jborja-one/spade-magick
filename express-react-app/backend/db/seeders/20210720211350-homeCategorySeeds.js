@@ -27,7 +27,7 @@ module.exports = {
 				{
 					id: 3,
 					title: 'Mentalism',
-					image: 'https://lh3.googleusercontent.com/proxy/ZfQwlqYn2c9AkEXOOZ3Qu_sde3LDSqG5dZ_TMQGlmtnFxUIBVi62-5PThz7rzPqcR5Q19QIuvbWPyj0rJQukZERPN31goyqO',
+					image: 'https://visitbath.com/wp-content/uploads/2019/02/draper.png',
 					createdAt: new Date(),
 					updatedAt: new Date(),
 				},

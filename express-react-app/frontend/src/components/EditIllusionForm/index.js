@@ -38,6 +38,7 @@ function EditIllusionForm({ isLoaded }) {
 			steps,
 			userId: sessionUser.id,
 			categoryId: select,
+			illusionId: editIllusion.id,
 		};
 
 		let updatedIllusion = await dispatch(illusionEdit(payload));
@@ -47,10 +48,14 @@ function EditIllusionForm({ isLoaded }) {
 	};
 
 	useEffect(() => {
-		if (categories.length) {
-			setSelect(categories[0].id);
+		if (editIllusion) {
+			setTitle(editIllusion.title);
+			setImage(editIllusion.image);
+			setDescription(editIllusion.description);
+			setSteps(editIllusion.steps);
+			setSelect(editIllusion.categoryId);
 		}
-	}, [categories]);
+	}, [editIllusion]);
 
 	let sessionLinks;
 	if (sessionUser) {

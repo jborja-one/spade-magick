@@ -81,7 +81,7 @@ function Illusion({ isLoaded }) {
 					</div>
 					<div className='illusion-steps'>
 						<h3 className='steps-title'>Steps</h3>
-						{illusion.steps})
+						{illusion.steps}
 					</div>
 					<div className='btn-container'>
 						<button

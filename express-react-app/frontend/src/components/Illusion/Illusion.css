@@ -18,9 +18,11 @@
 	transition-delay: 0s;
 }
 
-/* .illusion-container:hover {
+.illusion-container:hover {
 	opacity: 1;
-} */
+	background-color: rgba(190, 23, 34, 0.7);
+	color: white;
+}
 
 .illusion-title {
 	display: flex;
@@ -33,7 +35,6 @@
 .illusion-img {
 	display: flex;
 	justify-content: center;
-	opacity: 1;
 	margin: 20px;
 }
 

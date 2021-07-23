@@ -6,6 +6,12 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
 }
 
 #root {
@@ -38,7 +44,7 @@ body {
 
 .initial-form {
 	display: flex;
-	/* align-items: center; */
+	justify-content: center;
 	flex-direction: column;
 	border: 1px solid black;
 	height: auto;
@@ -119,4 +125,5 @@ body {
 
 .input-textarea {
 	height: 150px;
+	word-wrap: normal;
 }

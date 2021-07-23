@@ -70,6 +70,11 @@ body {
 	width: 1000px;
 }
 
+.form-container {
+	display: flex;
+	justify-content: center;
+}
+
 .initial-form {
 	display: flex;
 	justify-content: center;
@@ -78,7 +83,7 @@ body {
 	height: auto;
 	width: 500px;
 	margin-top: 80px;
-	margin-left: 400px;
+	/* margin-left: 400px; */
 	margin: 0, auto;
 	border-radius: 20px;
 	background-color: white;

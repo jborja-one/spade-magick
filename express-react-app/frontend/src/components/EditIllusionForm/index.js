@@ -1,17 +1,19 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, NavLink } from 'react-router-dom';
-import { illusionCreate } from '../../store/illusion';
-import { homeCategory } from '../../store/home-category';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import ProfileButton from '../Navigation/ProfileButton';
-import logotxt from './images/logotxt-create.png';
+import logotxt from './images/logo-txt.png';
+import logotxtEdit from './images/logotxt-edit.png';
 import logo from './images/logo.jpeg';
+import { illusionEdit } from '../../store/illusion';
+import { homeCategory } from '../../store/home-category';
 
-const CreateIllusionForm = ({ isLoaded }) => {
+function EditIllusionForm({ isLoaded }) {
 	const dispatch = useDispatch();
 	const history = useHistory();
-	const categories = useSelector((state) => state.homeCategory);
 	const sessionUser = useSelector((state) => state.session.user);
+	const editIllusion = useSelector((state) => state.illusions);
+	const categories = useSelector((state) => state.homeCategory);
 
 	const [title, setTitle] = useState('');
 	const [image, setImage] = useState('');
@@ -25,20 +27,11 @@ const CreateIllusionForm = ({ isLoaded }) => {
 	const updateSteps = (e) => setSteps(e.target.value);
 	const updateSelect = (e) => setSelect(e.target.value);
 
-	useEffect(() => {
-		dispatch(homeCategory());
-	}, [dispatch]);
-
-	useEffect(() => {
-		if (categories.length) {
-			setSelect(categories[0].id);
-		}
-	}, [categories]);
-
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
 		const payload = {
+			// ...editIllusion,
 			title,
 			image,
 			description,
@@ -47,18 +40,22 @@ const CreateIllusionForm = ({ isLoaded }) => {
 			categoryId: select,
 		};
 
-		let createdIllusion = await dispatch(illusionCreate(payload));
-
-		if (createdIllusion) {
-			history.push(`/illusions/${createdIllusion.id}`);
+		let updatedIllusion = await dispatch(illusionEdit(payload));
+		if (updatedIllusion) {
+			history.push(`/illusions/${updatedIllusion.id}`);
 		}
 	};
+
+	useEffect(() => {
+		if (categories.length) {
+			setSelect(categories[0].id);
+		}
+	}, [categories]);
 
 	let sessionLinks;
 	if (sessionUser) {
 		sessionLinks = <ProfileButton user={sessionUser} />;
 	}
-
 	return (
 		<>
 			<div className='nav-bar__container'>
@@ -85,8 +82,6 @@ const CreateIllusionForm = ({ isLoaded }) => {
 					</li>
 				</ul>
 			</div>
-			{/* Navbar */}
-
 			<div className='home-logo__container'>
 				<div className='title-logo__container'>
 					<img
@@ -96,17 +91,16 @@ const CreateIllusionForm = ({ isLoaded }) => {
 					<img
 						alt='title-logo-txt'
 						className='title-logotxt'
-						src={logotxt}></img>
+						src={logotxtEdit}></img>
 				</div>
 				<div className='title'></div>
 				<div className='title-container'>
 					<h1 className='title'>Discover, Create, Show off</h1>
-					<h2 className='subtitle'>Time to Show Off ...!</h2>
-					<h2 className='subtitle'>Show us what you can do!</h2>
+					<h3 className='subtitle'>
+						We know you like perfect... Make it your own!
+					</h3>
 				</div>
 			</div>
-			{/* logo div */}
-
 			<div className='form-container'>
 				<form
 					onSubmit={handleSubmit}
@@ -172,13 +166,13 @@ const CreateIllusionForm = ({ isLoaded }) => {
 					</label>
 					<div className='form-btn__container'>
 						<button type='submit' className='form-btn'>
-							Create
+							Confirm
 						</button>
 					</div>
 				</form>
 			</div>
 		</>
 	);
-};
+}
 
-export default CreateIllusionForm;
+export default EditIllusionForm;

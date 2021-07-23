@@ -49,7 +49,7 @@ router.post(
 );
 
 router.delete(
-	'delete/:illusionId',
+	'/delete/:illusionId',
 	requireAuth,
 	asyncHandler(async (req, res) => {
 		const { illusionId } = req.params;
@@ -60,16 +60,25 @@ router.delete(
 	})
 );
 
-router.post(
-	'edit/:illusionId',
+router.put(
+	'/edit/:illusionId',
 	requireAuth,
 	asyncHandler(async (req, res) => {
 		const { illusionId } = req.params;
-		const illusionUpdate = Illusion.findByPk(illusionId);
-		const { title, image, description, steps } = req.body;
-		const illusion = { title, image, description, steps };
-		const editedillusion = await illusionUpdate.update(illusion);
-		res.json(editedillusion);
+		const parsedId = Number(illusionId);
+		const illusionUpdate = await Illusion.findByPk(parsedId);
+		const { title, image, description, steps, userId, categoryId } =
+			req.body;
+		const illusion = {
+			title,
+			image,
+			description,
+			steps,
+			userId,
+			categoryId,
+		};
+		const editedIllusion = await illusionUpdate.update(illusion);
+		res.json(editedIllusion);
 	})
 );
 

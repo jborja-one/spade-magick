@@ -47,11 +47,15 @@ export const illusionCreate = (payload) => async (dispatch) => {
 };
 
 export const illusionEdit = (payload) => async (dispatch) => {
-	const response = await csrfFetch(`/api/illusion/edit/${payload.id}`, {
-		method: 'PUT',
-		body: JSON.stringify(payload),
-	});
-
+	console.log(payload, 'from thunk');
+	const response = await csrfFetch(
+		`/api/illusion/edit/${payload.illusionId}`,
+		{
+			method: 'PUT',
+			body: JSON.stringify(payload),
+		}
+	);
+	console.log(response.ok === true);
 	if (response.ok) {
 		const illusion = await response.json();
 		dispatch(editIllusion(illusion));
@@ -60,13 +64,14 @@ export const illusionEdit = (payload) => async (dispatch) => {
 };
 
 export const illusionDelete = (payload) => async (dispatch) => {
-	console.log(payload, 'illsuionId in Delete thunk');
-	const response = await fetch(`/api/illusion/delete/${payload.illusionId}`, {
-		method: 'DELETE',
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify(payload),
-	});
-	console.log(response.ok === true);
+	const response = await csrfFetch(
+		`/api/illusion/delete/${payload.illusionId}`,
+		{
+			method: 'DELETE',
+			body: JSON.stringify(payload),
+		}
+	);
+
 	if (response.ok) {
 		const illusion = await response.json();
 		dispatch(deleteIllusion(illusion));

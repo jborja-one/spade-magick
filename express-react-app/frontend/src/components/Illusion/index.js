@@ -8,7 +8,7 @@ import logotxt from './images/logo-txt.png';
 import './Illusion.css';
 
 function Illusion({ isLoaded }) {
-	const history = useHistory;
+	const history = useHistory();
 	const dispatch = useDispatch();
 	const { illusionId } = useParams();
 
@@ -20,6 +20,11 @@ function Illusion({ isLoaded }) {
 		sessionLinks = <ProfileButton user={sessionUser} />;
 	}
 
+	const editBtn = (e) => {
+		e.preventDefault();
+		history.push('/editIllusion');
+	};
+
 	const deleteIllusion = async (e) => {
 		e.preventDefault();
 
@@ -30,7 +35,7 @@ function Illusion({ isLoaded }) {
 		let deletedIllusion = await dispatch(illusionDelete(payload));
 
 		if (deletedIllusion) {
-			history.push('/illusions');
+			history.push('/');
 		}
 	};
 
@@ -79,7 +84,11 @@ function Illusion({ isLoaded }) {
 						{illusion.steps})
 					</div>
 					<div className='btn-container'>
-						<button className='form-btn illusion-btn'>Edit</button>
+						<button
+							className='form-btn illusion-btn'
+							onClick={editBtn}>
+							Edit
+						</button>
 						<button
 							className='form-btn illusion-btn'
 							onClick={deleteIllusion}>
@@ -88,7 +97,6 @@ function Illusion({ isLoaded }) {
 					</div>
 				</div>
 			)}
-			)
 		</div>
 	);
 }

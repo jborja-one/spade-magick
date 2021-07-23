@@ -34,6 +34,19 @@ body {
 	height: 20px;
 }
 
+.input-textarea {
+	margin-left: 10px;
+	width: 50%;
+	border-radius: 10px;
+	font-weight: bolder;
+	transition-property: height;
+	transition-delay: 0s;
+}
+
+.input-textarea:focus {
+	height: 150px;
+}
+
 .form-label {
 	display: flex;
 	justify-content: left;
@@ -121,9 +134,4 @@ body {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 15px;
-}
-
-.input-textarea {
-	height: 150px;
-	word-wrap: normal;
 }

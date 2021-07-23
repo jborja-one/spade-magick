@@ -148,10 +148,11 @@ function EditIllusionForm({ isLoaded }) {
 						/>
 					</label>
 
-					<label className='form-label input-textarea'>
+					<label className='form-label '>
 						Illusion Description
 						<input
-							className='form-input'
+							className='form-input input-textarea
+							input-textarea'
 							type='textarea'
 							value={description}
 							onChange={updateDescription}
@@ -159,10 +160,11 @@ function EditIllusionForm({ isLoaded }) {
 							placeholder='Ex. What is the main effect of your illusion'
 						/>
 					</label>
-					<label className='form-label input-textarea'>
+					<label className='form-label '>
 						Illusion Steps
 						<input
-							className='form-input'
+							className='form-input input-textarea
+							input-textarea'
 							type='textarea'
 							value={steps}
 							onChange={updateSteps}

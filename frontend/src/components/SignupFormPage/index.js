@@ -42,93 +42,98 @@ function SignupFormPage() {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className='initial-form signup-form'>
-			<div className='logo-container'>
-				<img alt='logo' className='label-img' src={logo}></img>
-				<img alt='logo-text' className='logotxt' src={logotxt}></img>
-			</div>
-			<ul>
-				{errors.map((error, idx) => (
-					<li key={idx}>{error}</li>
-				))}
-			</ul>
-			<label className='form-label'>
-				First Name
-				<input
-					className='form-input'
-					type='text'
-					value={firstName}
-					onChange={(e) => setFirstName(e.target.value)}
-					required
-					placeholder='Ex. Chris'
-				/>
-			</label>
-			<label className='form-label'>
-				Last Name
-				<input
-					className='form-input'
-					type='text'
-					value={lastName}
-					onChange={(e) => setLastName(e.target.value)}
-					required
-					placeholder='Ex. Angel'
-				/>
-			</label>
-			<label className='form-label'>
-				Email
-				<input
-					className='form-input'
-					type='text'
-					value={email}
-					onChange={(e) => setEmail(e.target.value)}
-					required
-					placeholder='Ex. spade@magic.com'
-				/>
-			</label>
-			<label className='form-label'>
-				Username
-				<input
-					className='form-input'
-					type='text'
-					value={userName}
-					onChange={(e) => setUserName(e.target.value)}
-					required
-					placeholder='Ex. Mr. Spade Magick'
-				/>
-			</label>
-			<label className='form-label'>
-				Password
-				<input
-					className='form-input'
-					type='password'
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-					required
-					placeholder='Confirm Password'
-				/>
-			</label>
-			<label className='form-label'>
-				Confirm Password
-				<input
-					className='form-input'
-					type='password'
-					value={confirmPassword}
-					onChange={(e) => setConfirmPassword(e.target.value)}
-					required
-					placeholder='Password'
-				/>
-			</label>
-			<div className='form-btn__container'>
-				<button type='submit' className='form-btn'>
-					Sign Up
-				</button>
-			</div>
-			<div className='log-from__footer-container'>
-				<NavLink to='/login' className='log-from__footer'>
-					Already have an account? Log In
-				</NavLink>
-			</div>
-		</form>
+		<div className='form-container'>
+			<form onSubmit={handleSubmit} className='initial-form signup-form'>
+				<div className='logo-container'>
+					<img alt='logo' className='label-img' src={logo}></img>
+					<img
+						alt='logo-text'
+						className='logotxt'
+						src={logotxt}></img>
+				</div>
+				<ul>
+					{errors.map((error, idx) => (
+						<li key={idx}>{error}</li>
+					))}
+				</ul>
+				<label className='form-label'>
+					First Name
+					<input
+						className='form-input'
+						type='text'
+						value={firstName}
+						onChange={(e) => setFirstName(e.target.value)}
+						required
+						placeholder='Ex. Chris'
+					/>
+				</label>
+				<label className='form-label'>
+					Last Name
+					<input
+						className='form-input'
+						type='text'
+						value={lastName}
+						onChange={(e) => setLastName(e.target.value)}
+						required
+						placeholder='Ex. Angel'
+					/>
+				</label>
+				<label className='form-label'>
+					Email
+					<input
+						className='form-input'
+						type='text'
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+						required
+						placeholder='Ex. spade@magic.com'
+					/>
+				</label>
+				<label className='form-label'>
+					Username
+					<input
+						className='form-input'
+						type='text'
+						value={userName}
+						onChange={(e) => setUserName(e.target.value)}
+						required
+						placeholder='Ex. Mr. Spade Magick'
+					/>
+				</label>
+				<label className='form-label'>
+					Password
+					<input
+						className='form-input'
+						type='password'
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+						required
+						placeholder='Confirm Password'
+					/>
+				</label>
+				<label className='form-label'>
+					Confirm Password
+					<input
+						className='form-input'
+						type='password'
+						value={confirmPassword}
+						onChange={(e) => setConfirmPassword(e.target.value)}
+						required
+						placeholder='Password'
+					/>
+				</label>
+				<div className='form-btn__container'>
+					<button type='submit' className='form-btn'>
+						Sign Up
+					</button>
+				</div>
+				<div className='log-from__footer-container'>
+					<NavLink to='/login' className='log-from__footer'>
+						Already have an account? Log In
+					</NavLink>
+				</div>
+			</form>
+		</div>
 	);
 }
 

@@ -68,22 +68,24 @@ const CreateIllusionForm = ({ isLoaded }) => {
 						className='nav-bar__logotxt'
 						src={logotxt}></img>
 				</div>
-				<ul className='nav-bar-ul'>
-					{isLoaded && sessionLinks}
-					<li className='nav-bar__link'>
-						<NavLink exact to='/' className='nav-bar'>
-							Discover
-						</NavLink>
-					</li>
-					<li className='nav-bar__link'>
-						<NavLink
-							exact
-							to='/illusions/create'
-							className='nav-bar'>
-							Create
-						</NavLink>
-					</li>
-				</ul>
+				<div className='nav-bar-ul__container'>
+					<ul className='nav-bar-ul'>
+						{isLoaded && sessionLinks}
+						<li className='nav-bar__link'>
+							<NavLink exact to='/' className='nav-bar'>
+								Discover
+							</NavLink>
+						</li>
+						<li className='nav-bar__link'>
+							<NavLink
+								exact
+								to='/illusions/create'
+								className='nav-bar'>
+								Create
+							</NavLink>
+						</li>
+					</ul>
+				</div>
 			</div>
 			{/* Navbar */}
 

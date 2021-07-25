@@ -88,7 +88,7 @@ function Reviews() {
 						<div>{user.userName}</div>
 						<div>{reviews.description}</div>
 						<div>
-							<button>Edit</button>
+							<button onClick={editBtn}>Edit</button>
 							<button>Delete</button>
 						</div>
 					</div>

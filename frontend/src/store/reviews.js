@@ -34,7 +34,7 @@ const deleteReview = (review) => {
 };
 
 export const getReviews = (reviewId) => async (dispatch) => {
-	const response = await fetch(`/api/review/${reviewId}`);
+	const response = await csrfFetch(`/api/review/${reviewId}`);
 	const reviews = await response.json();
 	dispatch(setReview(reviews));
 };

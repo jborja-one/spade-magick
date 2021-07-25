@@ -94,11 +94,11 @@ const reviewValidators = [
 ];
 
 router.get(
-	'/review/:reviewId',
+	'/review/:illusionId',
 	requireAuth,
 	asyncHandler(async (req, res) => {
-		const { reviewId } = req.params;
-		const parsedId = Number(reviewId);
+		const { illusionId } = req.params;
+		const parsedId = Number(illusionId);
 		const review = await Review.findAll({ where: parsedId });
 		res.json(review);
 	})

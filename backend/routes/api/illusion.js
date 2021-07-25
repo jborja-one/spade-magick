@@ -1,7 +1,7 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const { requireAuth } = require('../../utils/auth');
-const { Illusion } = require('../../db/models');
+const { Illusion, Review } = require('../../db/models');
 const { check } = require('express-validator');
 const router = express.Router();
 
@@ -94,8 +94,7 @@ const reviewValidators = [
 ];
 
 router.get(
-	'/review/:illusionId',
-	requireAuth,
+	'/review/:reviewId',
 	asyncHandler(async (req, res) => {
 		const { illusionId } = req.params;
 		const parsedId = Number(illusionId);
@@ -105,16 +104,16 @@ router.get(
 );
 
 router.post(
-	'/review/',
+	'/review/create',
 	requireAuth,
 	reviewValidators,
 	asyncHandler(async (req, res) => {
 		const { description, userId, illusionId, title } = req.body;
 		const review = await Review.create({
+			title,
 			description,
 			userId,
 			illusionId,
-			title,
 		});
 		res.json(review);
 	})

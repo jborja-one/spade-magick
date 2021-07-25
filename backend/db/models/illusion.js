@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
 			// define association here
 			Illusion.belongsTo(models.Category, { foreignKey: 'id' });
 			Illusion.belongsTo(models.User, { foreignKey: 'userId' });
-			Illusion.hasMany(models.Review, { models: 'illusionId' });
+			Illusion.hasMany(models.Review, { foreignKey: 'illusionId' });
 		}
 	}
 	Illusion.init(

@@ -4,6 +4,7 @@ import sessionReducer from './session';
 import homeCategoryReducer from './home-category';
 import illusionReducer from './illusion';
 import categoriesReducer from './categories';
+import reviewReducer from './reviews';
 
 const rootReducer = combineReducers({
 	// add reducer functions here
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
 	homeCategory: homeCategoryReducer,
 	illusions: illusionReducer,
 	categories: categoriesReducer,
+	reviews: reviewReducer,
 });
 
 let enhancer;

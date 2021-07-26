@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { NavLink, useParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadCategory } from '../../store/categories';
+import { homeCategory } from '../../store/home-category';
 import ProfileButton from '../Navigation/ProfileButton';
 import './EachCategory.css';
 import logotxt from './images/logo-txt.png';
@@ -11,6 +12,12 @@ import logo from './images/logo.jpeg';
 function EachCategory({ isLoaded }) {
 	const dispatch = useDispatch();
 	const { categoryId } = useParams();
+	const homeCategory = useSelector((state) => {
+		return state.homeCategory.filter((item) => {
+			const title = item['title'];
+			return title;
+		});
+	});
 	const category = useSelector((state) => {
 		return state.categories.filter((item) => {
 			const image = item['image'];
@@ -72,7 +79,11 @@ function EachCategory({ isLoaded }) {
 				<div className='title'></div>
 				<div className='title-container'>
 					<h1 className='title'>Discover, Create, Show off</h1>
-					<h3 className='subtitle'>The Best of "Title"</h3>
+					{homeCategory !== undefined && (
+						<h3 className='subtitle'>
+							The Best of {homeCategory[categoryId - 1]['title']}
+						</h3>
+					)}
 				</div>
 			</div>
 			<div className='component-container'>

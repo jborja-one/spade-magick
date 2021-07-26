@@ -33,6 +33,12 @@ const deleteIllusion = (illusion) => {
 	};
 };
 
+export const getIllusion = (illusionId) => async (dispatch) => {
+	const response = await fetch(`/api/illusion/${illusionId}`);
+	const illusion = await response.json();
+	dispatch(setIllusion(illusion));
+};
+
 export const illusionCreate = (payload) => async (dispatch) => {
 	const response = await csrfFetch('/api/illusion/create', {
 		method: 'POST',
@@ -76,12 +82,6 @@ export const illusionDelete = (payload) => async (dispatch) => {
 		dispatch(deleteIllusion(illusion));
 		return illusion;
 	}
-};
-
-export const getIllusion = (illusionId) => async (dispatch) => {
-	const response = await fetch(`/api/illusion/${illusionId}`);
-	const illusion = await response.json();
-	dispatch(setIllusion(illusion));
 };
 
 const illusionReducer = (state = [], action) => {

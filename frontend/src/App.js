@@ -10,6 +10,7 @@ import Illusion from './components/Illusion';
 import EachCategory from './components/EachCategory';
 import CreateIllusionForm from './components/CreateIllusionForm';
 import EditIllusionForm from './components/EditIllusionForm';
+import Reviews from './components/ReviewForm/Review';
 
 function App() {
 	const dispatch = useDispatch();
@@ -36,6 +37,7 @@ function App() {
 				</Route>
 				<Route path='/illusions/:illusionId'>
 					<Illusion isLoaded={isLoaded} />
+					<Reviews />
 				</Route>
 				<Route path='/categories/:categoryId'>
 					<EachCategory isLoaded={isLoaded} />

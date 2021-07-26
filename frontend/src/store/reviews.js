@@ -33,14 +33,18 @@ const deleteReview = (review) => {
 	};
 };
 
-export const getReviews = (reviewId) => async (dispatch) => {
-	const response = await csrfFetch(`/api/review/${reviewId}`);
-	const reviews = await response.json();
-	dispatch(setReview(reviews));
+export const getReviews = () => async (dispatch) => {
+	const response = await fetch(`/api/illusion/review`);
+
+	if (response.ok) {
+		const review = await response.json();
+		dispatch(setReview(review));
+		return review;
+	}
 };
 
 export const reviewCreate = (payload) => async (dispatch) => {
-	const response = await csrfFetch('/api/review/create', {
+	const response = await csrfFetch('/api/illusion/review/create', {
 		method: 'POST',
 		body: JSON.stringify(payload),
 	});
@@ -53,10 +57,13 @@ export const reviewCreate = (payload) => async (dispatch) => {
 };
 
 export const reviewEdit = (payload) => async (dispatch) => {
-	const response = await csrfFetch(`/api/review/edit/${payload.reviewId}`, {
-		method: 'PUT',
-		body: JSON.stringify(payload),
-	});
+	const response = await csrfFetch(
+		`/api/illusion/review/edit/${payload.reviewId}`,
+		{
+			method: 'PUT',
+			body: JSON.stringify(payload),
+		}
+	);
 
 	if (response.ok) {
 		const review = await response.json();
@@ -66,10 +73,13 @@ export const reviewEdit = (payload) => async (dispatch) => {
 };
 
 export const reviewDelete = (payload) => async (dispatch) => {
-	const response = await csrfFetch(`/api/review/delete/${payload.reviewId}`, {
-		method: 'DELETE',
-		body: JSON.stringify(payload),
-	});
+	const response = await csrfFetch(
+		`/api/illusion/review/delete/${payload.reviewId}`,
+		{
+			method: 'DELETE',
+			body: JSON.stringify(payload),
+		}
+	);
 
 	if (response.ok) {
 		const review = await response.json();
@@ -88,7 +98,7 @@ const reviewReducer = (state = [], action) => {
 			newState = action.payload;
 			return newState;
 		case EDIT_REVIEW:
-			newState = action.payload;
+			newState = Object.entries(...state);
 			return newState;
 		case DELETE_REVIEW:
 			newState = action.payload;

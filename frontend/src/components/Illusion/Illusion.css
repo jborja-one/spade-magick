@@ -1,5 +1,4 @@
 .illusion-container {
-	display: inline-block;
 	box-sizing: border-box;
 	background-color: white;
 	opacity: 0.8;
@@ -36,6 +35,10 @@
 	display: flex;
 	justify-content: center;
 	margin: 20px;
+}
+
+.label-review {
+	color: black;
 }
 
 img {

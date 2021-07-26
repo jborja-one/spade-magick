@@ -2,6 +2,7 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 const { requireAuth } = require('../../utils/auth');
 const { Illusion, Review } = require('../../db/models');
+const { User } = require('../../db/models');
 const { check } = require('express-validator');
 const router = express.Router();
 
@@ -98,7 +99,9 @@ router.get(
 	asyncHandler(async (req, res) => {
 		const { illusionId } = req.params;
 		const parsedId = Number(illusionId);
-		const review = await Review.findAll({ where: parsedId });
+		const review = await Review.findAll({
+			where: parsedId,
+		});
 		res.json(review);
 	})
 );

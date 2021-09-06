@@ -68,21 +68,21 @@ export const illusionEdit = (payload) => async (dispatch) => {
 	}
 };
 
-// export const illusionDelete = (payload) => async (dispatch) => {
-// 	const response = await csrfFetch(
-// 		`/api/illusion/delete/${payload.illusionId}`,
-// 		{
-// 			method: 'DELETE',
-// 			body: JSON.stringify(payload),
-// 		}
-// 	);
+export const illusionDelete = (payload) => async (dispatch) => {
+	const response = await csrfFetch(
+		`/api/illusion/delete/${payload.illusionId}`,
+		{
+			method: 'DELETE',
+			body: JSON.stringify(payload),
+		}
+	);
 
-// 	if (response.ok) {
-// 		const illusion = await response.json();
-// 		dispatch(deleteIllusion(illusion));
-// 		return illusion;
-// 	}
-// };
+	if (response.ok) {
+		const illusion = await response.json();
+		dispatch(deleteIllusion(illusion));
+		return illusion;
+	}
+};
 
 const illusionReducer = (state = [], action) => {
 	let newState;

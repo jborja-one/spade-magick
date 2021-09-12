@@ -25,55 +25,31 @@ View live: <a href='https://jborja-one.github.io/'>Spade Magick</a>
 
 - The landing page has convinient and clearly designed login and signup buttons, as well as a profile and create links for easy access.
 
-<img src='https://jborja-bucket.s3.us-west-1.amazonaws.com/images/spademagick-login-signup.png' >
+<img src='https://jborja-bucket.s3.us-west-1.amazonaws.com/images/spademagick-homepage.png' >
     <br />
     
-## Login and Signup Modals
 
-- Ton enhace our user's experience when entering a magic website, we have added additional CSS when the user interacts with the page.
+## Category Page
 
-<img src='https://safemedia-capstone.s3.us-east-2.amazonaws.com/Public/safemedia-login-signup.png' >
+- Inside a category you will be able to find all of the illusions that belong to said category, there you will be able to select any illusion for further information, or edit and delete options.
+
+<img src='https://jborja-bucket.s3.us-west-1.amazonaws.com/images/spademagick-category.png' >
     <br />
 
-## User Profile Page
+## Illusion Page
 
-- Our user profile page is where our users will be able to categorize their media uploads by creating groups with descriptive icons and customizable category and title names.
-- There are also clearly designed logout and home buttons to aid in navigation of the site.
-- The logo icon in between the logout and home buttons, also acts as a link to return to the home page.
-- There is a clear Create button that will allow our users to create a new group with a conviniently designed modal.
+- The illusion page will show all of the details for each individual illusion, including the description of the effect and the instructions on how to performit.
+- There will also be 2 easly found buttons that will be for deleting and editing said illusion.
 
-<img src='https://safemedia-capstone.s3.us-east-2.amazonaws.com/Public/groups-page.png' >
-    <br />
-
-## Albums Page
-
-- Our albums page is where our users will be able to further organize their uploads by creating albums within each group with descriptive icons and customizable category and title names.
-- There are also clearly designed logout and home buttons to aid in navigation of the site.
-- The logo icon in between the logout and home buttons, also acts as a link to return to the home page.
-- There is a clear Create button that will allow our users to create a new group with a conviniently designed modal.
-
-<img src='https://safemedia-capstone.s3.us-east-2.amazonaws.com/Public/albums-page.png' >
-    <br />
-    
-## Media Page
-
-- Our media page is where your media will live. Here you will be able to upload your images (audio files, video files and more coming soon...)
-- Our users will be able to add a descriptive title to each of their files.
-- There are also clearly designed logout and home buttons to aid in navigation of the site.
-- The logo icon in between the logout and home buttons, also acts as a link to return to the home page.
-- There is a clear Create button that will allow our users to create a new group with a conviniently designed modal.
-
-<img src='https://safemedia-capstone.s3.us-east-2.amazonaws.com/Public/media-page.png' >
+<img src='https://jborja-bucket.s3.us-west-1.amazonaws.com/images/spademagick-illusion.png' >
     <br />
 
 # Technologies
 
--   <a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=Python&logoColor=white&" /></a>
--   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/-CSS3-1572B6?logo=CSS3" /></a>
--   <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://img.shields.io/badge/-HTML5-E34F26?logo=HTML5&logoColor=ffffff" /></a>
--   <a href="https://flask.palletsprojects.com/en/1.1.x/"><img alt="Flask" src="https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=Flask&logoColor=white" /></a>
--   <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/-PostgreSQL-336791?logo=PostgreSQL" /></a>
--   <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/-React-61DAFB?logo=React&logoColor=333333" /></a>
--   <a href="https://redux.js.org/"><img src="https://img.shields.io/badge/-Redux-764ABC?logo=Redux" /></a>
--   <a href=https://www.sqlalchemy.org/><img src=https://img.shields.io/badge/-SQLAlchemy-red /></a>
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+- ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+- ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+- ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
     <br />

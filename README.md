@@ -2,8 +2,8 @@
 <br />
 
 <p align='center'>
-  <img src='https://safemedia-capstone.s3.us-east-2.amazonaws.com/Public/spademagic-txt.png' >
-  <img src='https://safemedia-capstone.s3.us-east-2.amazonaws.com/Public/spademagick-logo.jpeg' width='450px' >
+  <img src='https://safemedia-capstone.s3.us-east-2.amazonaws.com/Public/spademagic-txt.png' width='350px' >
+  <img src='https://safemedia-capstone.s3.us-east-2.amazonaws.com/Public/spademagick-logo.jpeg' width='350px' >
 </p>
 
 Spade Magick is a platform created for magicians, amateurs and even fans of magic. Here, magicians are able to post their creations to either show them of even post instructions and media on how to perform each illusion. All illusions are devided by categories which will allow the user to find an illusion quicker and get to enjoy the magic faster.
@@ -17,21 +17,20 @@ View live: <a href='https://jborja-one.github.io/'>Spade Magick</a>
 ## Features
 
 -   User Sign up and login with email and password (Demo account link provided)
--   Create and Delete groups for categorizing your media uploads
--   Create and Delete albums to further organization and sort you media uploads
--   Create, Delete media uploads in your albums, such as images, audio files, videos (audio files and videos coming soon...)
+-   Create, update and delete illusions for better organization.
+-   Sharing and comments comming soon...
     <br />
 
 ## Home/Landing Page
 
-- The landing page has convinient and clearly designed login and signup buttons, which open a modal to use its functionality.
+- The landing page has convinient and clearly designed login and signup buttons, as well as a profile and create links for easy access.
 
-<img src='https://safemedia-capstone.s3.us-east-2.amazonaws.com/Public/safemedia-landing-page.png' >
+<img src='https://jborja-bucket.s3.us-west-1.amazonaws.com/images/spademagick-login-signup.png' >
     <br />
     
 ## Login and Signup Modals
 
-- To facilitate our user experience, we use wodals for log in and sign up, to avoid loading a whole new page and improve user satisfaction.
+- Ton enhace our user's experience when entering a magic website, we have added additional CSS when the user interacts with the page.
 
 <img src='https://safemedia-capstone.s3.us-east-2.amazonaws.com/Public/safemedia-login-signup.png' >
     <br />

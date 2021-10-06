@@ -26,6 +26,16 @@ function LoginFormPage() {
 		);
 	};
 
+	const demoLogin = (e) => {
+		e.preventDefault();
+		return dispatch(
+			sessionActions.login({
+				credential: 'Demo-lition',
+				password: 'password',
+			})
+		);
+	};
+
 	return (
 		<div className='form-container'>
 			<form onSubmit={handleSubmit} className='initial-form login-form'>
@@ -63,6 +73,12 @@ function LoginFormPage() {
 				<div className='form-btn__container'>
 					<button type='submit' className='form-btn'>
 						Log In
+					</button>
+					<button
+						type='submit'
+						className='form-btn'
+						onClick={demoLogin}>
+						Demo
 					</button>
 				</div>
 				<div className='log-from__footer-container'>

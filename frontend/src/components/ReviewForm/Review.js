@@ -92,9 +92,11 @@ function Reviews() {
 					</label>
 					<label className='form-label label-review'>
 						Description:
-						<input
-							className='form-input'
+						<textarea
+							className=' form-textbox'
 							type='textarea'
+							rows='5'
+							cols='25'
 							value={description}
 							onChange={updateDescription}
 							required

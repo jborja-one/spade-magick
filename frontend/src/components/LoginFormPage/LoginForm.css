@@ -22,6 +22,7 @@ body {
 .form-input {
 	margin-left: 10px;
 	width: 50%;
+	/* border: 1px solid black; */
 	border-radius: 10px;
 	font-weight: bolder;
 	transition-property: margin;
@@ -32,6 +33,24 @@ body {
 	margin: 10px;
 	width: 270px;
 	height: 20px;
+}
+
+.form-textbox {
+	height: 100px;
+	margin-left: 10px;
+	width: 50%;
+	padding: 7px;
+	border: 2px solid black;
+	border-radius: 10px;
+	font-weight: bolder;
+	transition-property: margin;
+	transition-delay: 0s;
+	resize: none;
+}
+
+.form-textbox:focus {
+	margin: 10px;
+	width: 270px;
 }
 
 .input-textarea {

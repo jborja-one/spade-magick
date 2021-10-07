@@ -153,8 +153,8 @@ const CreateIllusionForm = ({ isLoaded }) => {
 
 					<label className='form-label '>
 						Illusion Description
-						<input
-							className='form-input input-textarea'
+						<textarea
+							className='form-input input-textarea form-textbox'
 							type='textarea'
 							value={description}
 							onChange={updateDescription}
@@ -164,8 +164,8 @@ const CreateIllusionForm = ({ isLoaded }) => {
 					</label>
 					<label className='form-label '>
 						Illusion Steps
-						<input
-							className='form-input input-textarea'
+						<textarea
+							className='form-input input-textarea form-textbox'
 							type='textarea'
 							value={steps}
 							onChange={updateSteps}

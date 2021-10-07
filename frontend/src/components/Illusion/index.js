@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getIllusion } from '../../store/illusion';
 import { illusionDelete } from '../../store/illusion';
 import ProfileButton from '../Navigation/ProfileButton';
+import Reviews from '../ReviewForm/Review';
 import logotxt from './images/logo-txt.png';
 import './Illusion.css';
 
@@ -99,6 +100,7 @@ function Illusion({ isLoaded }) {
 					</div>
 				</div>
 			)}
+			<Reviews />
 		</div>
 	);
 }

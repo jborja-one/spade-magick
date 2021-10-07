@@ -37,7 +37,7 @@ function App() {
 				</Route>
 				<Route path='/illusions/:illusionId'>
 					<Illusion isLoaded={isLoaded} />
-					<Reviews />
+					{/* <Reviews /> */}
 				</Route>
 				<Route path='/categories/:categoryId'>
 					<EachCategory isLoaded={isLoaded} />
